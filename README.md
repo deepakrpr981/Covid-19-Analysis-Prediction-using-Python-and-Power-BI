@@ -12,3 +12,47 @@ There are a variety of tools you can use to organize your data. When presented w
 # 3. Data Gathering -
 Python script for web scraping COVID-19 data from a webpage. This example uses BeautifulSoup and requests to scrape data from the Worldometer website, which is a common source for COVID-19 statistics.
 # # Write the Script: 
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+
+# URL of the webpage containing the COVID-19 data
+url = 'https://www.worldometers.info/coronavirus/'
+
+# Make an HTTP GET request to the URL
+response = requests.get(url)
+
+# Check if the request was successful
+if response.status_code == 200:
+    # Parse the HTML content of the webpage
+    soup = BeautifulSoup(response.content, 'html.parser')
+
+    # Find the table containing the COVID-19 data
+    table = soup.find(id='main_table_countries_today')
+
+    # Initialize a list to store the data
+    data = []
+
+    # Extract table headers
+    headers = []
+    for header in table.find_all('th'):
+        headers.append(header.text.strip())
+
+    # Extract table rows
+    for row in table.find_all('tr'):
+        columns = row.find_all('td')
+        if columns:
+            data.append([col.text.strip() for col in columns])
+
+    # Create a DataFrame
+    df = pd.DataFrame(data, columns=headers)
+
+    # Save the DataFrame to a CSV file
+    df.to_csv('covid19_data_worldometer.csv', index=False)
+
+    print("Data scraped and saved to covid19_data_worldometer.csv")
+else:
+    print("Failed to retrieve data")
+
+# Inspect the first few rows of the DataFrame
+print(df.head())
