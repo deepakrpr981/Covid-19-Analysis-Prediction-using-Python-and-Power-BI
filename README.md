@@ -15,14 +15,8 @@ Python script for web scraping COVID-19 data from a webpage. This example uses B
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-
-# URL of the webpage containing the COVID-19 data
 url = 'https://www.worldometers.info/coronavirus/'
-
-# Make an HTTP GET request to the URL
 response = requests.get(url)
-
-# Check if the request was successful
 if response.status_code == 200:
     # Parse the HTML content of the webpage
     soup = BeautifulSoup(response.content, 'html.parser')
