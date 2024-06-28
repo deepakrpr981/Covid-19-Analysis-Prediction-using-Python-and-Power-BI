@@ -86,5 +86,12 @@ Let’s consider an example of when unpivot can be helpful. Think of a financial
 
 Each month in this spreadsheet is represented by a column, such as January, February, March, April, etc. While it’s pretty simple to drag a range of fields and generate a chart, pulling something like this into a database for dynamic report building is a lot more difficult. That’s because each month is in a separate field or column in the database.
 <img width="407" alt="4" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/7f635ce3-a3e9-4138-a656-2c224519b4a9">
+# Convert the Column Type from String to Datetime Format in Pandas DataFrame.
+
+When we work with data in Pandas DataFrame of Python, it is pretty usual to encounter time series data. Panday is a strong tool that can handle time-series data in Python, and we might need to convert the string into Datetime format in the given dataset.
+
+In this tutorial, we will learn how to convert the DataFrame column of string into datetime format, "dd/mm/yy". The user cannot execute any time-series based operations on the dates if they are not in the required format. To deal with this, we need to convert the dates into the required date-time format.
+<img width="407" alt="5" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/6b63f90d-8e7b-46ea-877f-529682a9d0d5">
+
 
 
