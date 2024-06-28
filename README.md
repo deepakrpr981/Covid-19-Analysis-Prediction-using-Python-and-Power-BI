@@ -108,3 +108,10 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
 
 # Additing manually the numbers for first day
 <img width="430" alt="9" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/8ae6a3c6-4912-4f80-a32a-cac71c1a0dc6">
+
+# Data Cleaning
+When working with multiple data sources, there are many chances for data to be incorrect, duplicated, or mislabeled. If data is wrong, outcomes and algorithms are unreliable, even though they may look correct. Data cleaning is the process of changing or eliminating garbage, incorrect, duplicate, corrupted, or incomplete data in a dataset. There’s no such absolute way to describe the precise steps in the data cleaning process because the processes may vary from dataset to dataset. Data cleansing, data cleansing, or data scrub is the general data preparation process initiative. Data cleaning plays an important part in developing reliable answers within the analytical process and is observed to be a basic feature of the info science basics. The motive of data cleaning services is to construct uniform and standardized data sets that enable easy access to data analytics tools and business intelligence and perceive accurate data for each problem.
+<img width="437" alt="10" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/ab0f3ced-f3b9-46f0-b2c6-83e38c09c586">
+# After deleting null values 
+<img width="431" alt="11" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/4b4afae4-5761-445a-a6a9-bb6d714d1375">
+
