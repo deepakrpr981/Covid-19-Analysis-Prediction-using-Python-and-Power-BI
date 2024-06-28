@@ -103,3 +103,5 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
 # Adding Additional Columns
 <img width="409" alt="7" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/ace9ec5b-c1a8-4208-b941-b9eb80c76d00">
 
+# Braking the numbers by Day
+<img width="518" alt="8" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/bfc41ea7-7ebc-4f8c-84ee-0d1de224453b">
