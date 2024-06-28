@@ -85,4 +85,6 @@ Examples of When to Use Unpivot
 Let’s consider an example of when unpivot can be helpful. Think of a financial spreadsheet that any typical business would have, either exported from a financial tool or built manually.
 
 Each month in this spreadsheet is represented by a column, such as January, February, March, April, etc. While it’s pretty simple to drag a range of fields and generate a chart, pulling something like this into a database for dynamic report building is a lot more difficult. That’s because each month is in a separate field or column in the database.
+<img width="407" alt="4" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/7f635ce3-a3e9-4138-a656-2c224519b4a9">
+
 
