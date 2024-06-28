@@ -54,4 +54,18 @@ else:
 print(df.head())
 <img width="581" alt="1" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/78bcaad3-c6e9-42fe-9541-f6f26fbf695c">
 
+# Library
+Each of Python's open-source libraries has its own source code. A collection of code scripts that can be used iteratively to save time is known as a library. It is like a physical library in that it has resources that can be used again, as the name suggests.
 
+* Python OS module provides the facility to establish the interaction between the user and the operating system. It offers many useful OS functions that are used to perform OS-based tasks and get related information about operating system.
+
+* NumPy One of the most popular open-source Python packages, NumPy focuses on scientific and mathematical computation. It makes it easy to work with large matrices and multidimensional data thanks to built-in mathematical functions that make it easy to compute.
+* Pandas is an open-source library authorized under the Berkeley Programming Conveyance (BSD). This well-known library is frequently utilized in the field of data science. They're generally utilized for examination, control, and cleaning of information, in addition to other things.
+
+* Matplotlib Human minds are more adaptive for the visual representation of data rather than textual data. We can easily understand things when they are visualized. It is better to represent the data through the graph where we can analyze the data more efficiently and make the specific decision according to data analysis. Before learning the matplotlib, we need to understand data visualization and why data visualization is important.
+
+* Seaborn This package makes statistical model visualization possible. The library, which is largely based on Matplotlib, makes statistical graphics possible by:
+* Math Python has a built-in math module. It is a standard module, so we don't need to install it separately. We only have to import it into the program we want to use. We can import the module, like any other module of Python, using import math to implement the functions to perform mathematical operations.
+
+* Python DateTime module is provided in Python to work with dates and times. In python, DateTime is an inbuilt module rather than being a primitive data type, We just have to import the module mentioned above to work with dates as date object.
+  
