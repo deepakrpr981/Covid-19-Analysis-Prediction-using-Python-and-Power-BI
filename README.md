@@ -101,4 +101,5 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
 4. SQL INNER JOIN also known as simple join is the most common type of join.
 <img width="428" alt="6" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/23f6f38d-a568-47d2-a68a-7ff3fe79290e">
 # Adding Additional Columns
+<img width="409" alt="7" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/ace9ec5b-c1a8-4208-b941-b9eb80c76d00">
 
