@@ -53,4 +53,4 @@ else:
 # Inspect the first few rows of the DataFrame
 print(df.head())
 
-https://github.com/deepakrpr981/Covid---19-Dashboard/blob/main/Dashboard.jpg
+
