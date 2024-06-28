@@ -92,6 +92,12 @@ When we work with data in Pandas DataFrame of Python, it is pretty usual to enco
 
 In this tutorial, we will learn how to convert the DataFrame column of string into datetime format, "dd/mm/yy". The user cannot execute any time-series based operations on the dates if they are not in the required format. To deal with this, we need to convert the dates into the required date-time format.
 <img width="407" alt="5" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/6b63f90d-8e7b-46ea-877f-529682a9d0d5">
+# Joins
+A JOIN clause is used to combine rows from two or more tables, based on a related column between them. It is used to merge two tables into in new table  or retrieve data from there. There are 4 types of joins, as you can refer to below:
 
+1. If you want to access more than one table through a select statement.
+2. If you want to combine two or more table then SQL JOIN statement is used .it combines rows of that tables in one table and one can retrieve the information by a SELECT statement.
+3. The joining of two or more tables is based on common field between them.
+4. SQL INNER JOIN also known as simple join is the most common type of join.
 
 
