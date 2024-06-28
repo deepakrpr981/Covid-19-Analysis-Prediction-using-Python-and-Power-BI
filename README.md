@@ -115,3 +115,10 @@ When working with multiple data sources, there are many chances for data to be i
 # After deleting null values 
 <img width="431" alt="11" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/4b4afae4-5761-445a-a6a9-bb6d714d1375">
 
+# Data Export
+Data export is the extraction and conversion of raw data from their existing format into a format required by another application. Exporting data is also a way of backing up data or moving it between two different versions of programs. This process usually contains information such as user ID, user app key, individual ID, IP address, and custom user variables (custom var name).
+
+Exporting data can prove as a part of a backup strategy. This helps in extracting data and storing it separately. Data export saves a huge chunk of costs incurred in organizing and tracking data. An export command can be usually found in the “file” menu. This command is used to extract specific data like photos and videos. Text files do not contain any specific data to be exported.
+<img width="438" alt="12" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/cc8e388a-0b8b-4a8b-8d85-5fd4ef815588">
+# Creating  Dashboard based on this data 
+![Dashboad](https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/689435c0-8835-46e6-b413-fdcf3f7e459b)
