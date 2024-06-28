@@ -120,3 +120,5 @@ Exporting data can prove as a part of a backup strategy. This helps in extractin
 <img width="438" alt="12" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/cc8e388a-0b8b-4a8b-8d85-5fd4ef815588">
 # Creating  Dashboard based on this data 
 ![Dashboad](https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/689435c0-8835-46e6-b413-fdcf3f7e459b)
+
+
