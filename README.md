@@ -74,4 +74,15 @@ Most developers are familiar with pivot tables. With the use of sums or averages
 # Data Collection
 Before we define what is data collection, it’s essential to ask the question, “What is data?” The abridged answer is, data is various kinds of information formatted in a particular way. Therefore, data collection is the process of gathering, measuring, and analyzing accurate data from a variety of relevant sources to find answers to research problems, answer questions, evaluate outcomes, and forecast trends and probabilities. Accurate data collection is necessary to make informed business decisions, ensure quality assurance, and keep research integrity.
 <img width="376" alt="3" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/005d03ec-b1fa-4e3a-91a1-9d0a74d52a1e">
+# Unpivot Data
+Most developers are familiar with pivot tables. With the use of sums or averages, for instance, a pivot table may rapidly simplify fundamental statistical data and present it in a more comprehensible way. Before you can begin pivoting your data, though, you might need to reorder it, or in other words, “unpivot” it.
+
+
+The relational operations Pivot and Unpivot in SQL or Excel are used to change one table into another in order to create a table with a more straightforward perspective. Traditionally, we may say that the pivot operator transforms the table’s row data into its column data. The Unpivot operator performs the reverse operation, turning column-based data into rows.
+
+Examples of When to Use Unpivot
+
+Let’s consider an example of when unpivot can be helpful. Think of a financial spreadsheet that any typical business would have, either exported from a financial tool or built manually.
+
+Each month in this spreadsheet is represented by a column, such as January, February, March, April, etc. While it’s pretty simple to drag a range of fields and generate a chart, pulling something like this into a database for dynamic report building is a lot more difficult. That’s because each month is in a separate field or column in the database.
 
