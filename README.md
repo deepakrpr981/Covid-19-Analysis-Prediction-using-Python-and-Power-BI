@@ -105,3 +105,6 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
 
 # Braking the numbers by Day
 <img width="518" alt="8" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/bfc41ea7-7ebc-4f8c-84ee-0d1de224453b">
+
+# Additing manually the numbers for first day
+<img width="430" alt="9" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/8ae6a3c6-4912-4f80-a32a-cac71c1a0dc6">
