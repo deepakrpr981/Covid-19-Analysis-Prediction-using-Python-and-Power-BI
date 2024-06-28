@@ -68,4 +68,5 @@ Each of Python's open-source libraries has its own source code. A collection of 
 * Math Python has a built-in math module. It is a standard module, so we don't need to install it separately. We only have to import it into the program we want to use. We can import the module, like any other module of Python, using import math to implement the functions to perform mathematical operations.
 
 * Python DateTime module is provided in Python to work with dates and times. In python, DateTime is an inbuilt module rather than being a primitive data type, We just have to import the module mentioned above to work with dates as date object.
-  
+  <img width="553" alt="2" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/d945ae10-becb-4989-9f7b-969ea33b85c3">
+
