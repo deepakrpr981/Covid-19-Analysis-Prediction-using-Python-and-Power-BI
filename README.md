@@ -70,3 +70,6 @@ Each of Python's open-source libraries has its own source code. A collection of 
 * Python DateTime module is provided in Python to work with dates and times. In python, DateTime is an inbuilt module rather than being a primitive data type, We just have to import the module mentioned above to work with dates as date object.
   <img width="553" alt="2" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/d945ae10-becb-4989-9f7b-969ea33b85c3">
 
+Most developers are familiar with pivot tables. With the use of sums or averages, for instance, a pivot table may rapidly simplify fundamental statistical data and present it in a more comprehensible way. Before you can begin pivoting your data, though, you might need to reorder it, or in other words, “unpivot” it.
+# Data Collection
+Before we define what is data collection, it’s essential to ask the question, “What is data?” The abridged answer is, data is various kinds of information formatted in a particular way. Therefore, data collection is the process of gathering, measuring, and analyzing accurate data from a variety of relevant sources to find answers to research problems, answer questions, evaluate outcomes, and forecast trends and probabilities. Accurate data collection is necessary to make informed business decisions, ensure quality assurance, and keep research integrity.
