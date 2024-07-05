@@ -1,4 +1,4 @@
-# Covid-19-Analysis-&-Prediction using Python and Power BI
+# Covid-19-Analysis & Prediction using Python and Power BI
 {In this project, I have collected data from below data source, using API with beauiful soup and performed various task like data Gathering using web scraping ,data cleaning, data modeling, joning, columns transformation, removing neagative values using python, Also designed Dashboards in Power Bi }
 <img width="1234" alt="LFTjVAi8kt8O5-wn2eenlkWh7ziD0x7JTg" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/cacb5e14-e6d1-4d91-b256-0e2948dc337f">
 
