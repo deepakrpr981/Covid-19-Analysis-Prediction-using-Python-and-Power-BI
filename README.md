@@ -13,7 +13,7 @@ There are a variety of tools you can use to organize your data. When presented w
 # 3. Data Gathering -
 Python script for web scraping COVID-19 data from a webpage. This example uses BeautifulSoup and requests to scrape data from the Worldometer website, which is a common source for COVID-19 statistics.
 # # Write the Script: 
-'''sql
+
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
