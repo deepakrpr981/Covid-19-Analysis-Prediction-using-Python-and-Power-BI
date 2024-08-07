@@ -245,3 +245,5 @@ os.chdir(path)
 
 full_join3.to_csv('CoronaVirus Data.csv')
 ```
+# Dasgboard Using PowerBI
+<img width="614" alt="covvid" src="https://github.com/user-attachments/assets/5f51bd5c-9e1d-4299-88df-80d0f7790ba1">
