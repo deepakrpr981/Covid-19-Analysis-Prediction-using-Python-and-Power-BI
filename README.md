@@ -50,9 +50,9 @@ if response.status_code == 200:
     print("Data scraped and saved to covid19_data_worldometer.csv")
 else:
     print("Failed to retrieve data")
-```bash
+
 # Inspect the first few rows of the DataFrame
 print(df.head())
-
+```
 
 
