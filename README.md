@@ -43,6 +43,9 @@ print(df.head())
 ---
 
 # Library
+ach of Python's open-source libraries has its own source code. A collection of code scripts that can be used iteratively to save time is known as a library. It is like a physical library in that it has resources that can be used again, as the name suggests.
+
+Python OS module provides the facility to establish the interaction between the user and the operating system. It offers many useful OS functions that are used to perform OS-based tasks and get related information about operating system
 ```bash
 import os 
 import numpy as np 
