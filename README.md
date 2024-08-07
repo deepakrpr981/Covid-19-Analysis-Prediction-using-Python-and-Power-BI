@@ -53,7 +53,7 @@ else:
 # Inspect the first few rows of the DataFrame
 print(df.head())
 <img width="581" alt="1" src="https://github.com/deepakrpr981/Covid---19-Dashboard/assets/89341801/78bcaad3-c6e9-42fe-9541-f6f26fbf695c">
-
+---
 # Library
 Each of Python's open-source libraries has its own source code. A collection of code scripts that can be used iteratively to save time is known as a library. It is like a physical library in that it has resources that can be used again, as the name suggests.
 
