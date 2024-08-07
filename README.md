@@ -57,9 +57,12 @@ from datetime import datetime
 %matplotlib inline
 ```
 ---
-
-
-
+# Data Collection
+```bash
+Confirmed = pd.read_csv("covid19_confirmed_global.csv")
+Deaths = pd.read_csv("covid19_deaths_global.csv")
+Recovered = pd.read_csv("covid19_recovered_global.csv")
+```
 
 
 
