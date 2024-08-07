@@ -58,15 +58,49 @@ from datetime import datetime
 ```
 ---
 # Data Collection
+Before we define what is data collection, it’s essential to ask the question, “What is data?” The abridged answer is, data is various kinds of information formatted in a particular way. Therefore, data collection is the process of gathering, measuring, and analyzing accurate data from a variety of relevant sources to find answers to research problems, answer questions, evaluate outcomes, and forecast trends and probabilities. Accurate data collection is necessary to make informed business decisions, ensure quality assurance, and keep research integrity.
 ```bash
 Confirmed = pd.read_csv("covid19_confirmed_global.csv")
 Deaths = pd.read_csv("covid19_deaths_global.csv")
 Recovered = pd.read_csv("covid19_recovered_global.csv")
 ```
+---
+# check the shap of table 
+```bash
+print("The Shape of confirmed is: ", Confirmed.shape).head
+print("The Shape of deaths is: ", Deaths.shape)
+print("The Shape of recovered is: ", Recovered.shape)
+```
+---
+# Unpivot 
+Most developers are familiar with pivot tables. With the use of sums or averages, for instance, a pivot table may rapidly simplify fundamental statistical data and present it in a more comprehensible way. Before you can begin pivoting your data, though, you might need to reorder it, or in other words, “unpivot” it.
+
+The relational operations Pivot and Unpivot in SQL or Excel are used to change one table into another in order to create a table with a more straightforward perspective. Traditionally, we may say that the pivot operator transforms the table’s row data into its column data. The Unpivot operator performs the reverse operation, turning column-based data into rows.
+```bash
+Confirmed = pd.melt(Confirmed, id_vars=['Province/State', 'Country/Region', 'Lat', 'Long'], 
+                              var_name=['Date'])
+Deaths = pd.melt(Deaths, id_vars=['Province/State', 'Country/Region', 'Lat', 'Long'], 
+                           var_name=['Date'])
+Recovered = pd.melt(Recovered, id_vars=['Province/State', 'Country/Region', 'Lat', 'Long'], 
+                              var_name=['Date'])
 
 
+print("The Shape of Confirmed is: ", Confirmed.shape)
+print("The Shape of deaths is: ", Deaths.shape)
+print("The Shape of recovered is: ", Recovered.shape)
+```
 
+---
+# Convert the Column Type from String to Datetime Format in Pandas DataFrame
+When we work with data in Pandas DataFrame of Python, it is pretty usual to encounter time series data. Panday is a strong tool that can handle time-series data in Python, and we might need to convert the string into Datetime format in the given dataset.
 
+In this tutorial, we will learn how to convert the DataFrame column of string into datetime format, "dd/mm/yy". The user cannot execute any time-series based operations on the dates if they are not in the required format. To deal with this, we need to convert the dates into the required date-time format
+
+```bash
+Confirmed.columns = Confirmed.columns.str.replace('value', 'Confirmed')
+Deaths.columns = Deaths.columns.str.replace('value', 'Deaths')
+Recovered.columns = Recovered.columns.str.replace('value', 'Recovered')
+```
 
 
 
