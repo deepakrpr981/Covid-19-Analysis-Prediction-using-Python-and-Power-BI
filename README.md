@@ -101,6 +101,91 @@ Confirmed.columns = Confirmed.columns.str.replace('value', 'Confirmed')
 Deaths.columns = Deaths.columns.str.replace('value', 'Deaths')
 Recovered.columns = Recovered.columns.str.replace('value', 'Recovered')
 ```
+---
+# JOIN
+A JOIN clause is used to combine rows from two or more tables, based on a related column between them. It is used to merge two tables into in new table or retrieve data from there. There are 4 types of joins, as you can refer to below:
+
+1. If you want to access more than one table through a select statement.
+2. If you want to combine two or more table then SQL JOIN statement is used .it combines rows of that tables in one table and one can retrieve the information by a SELECT statement.
+3. The joining of two or more tables is based on common field between them.
+4. SQL INNER JOIN also known as simple join is the most common type of join.
+```bash
+full_join = Confirmed.merge(Deaths[['Province/State','Country/Region','Date','Deaths']], 
+                                      how = 'left', 
+                                      left_on = ['Province/State','Country/Region','Date'], 
+                                      right_on = ['Province/State', 'Country/Region','Date'])
+full_join.head()
+```
+```bash
+full_join = full_join.merge(Recovered[['Province/State','Country/Region','Date','Recovered']], 
+                                      how = 'left', 
+                                      left_on = ['Province/State','Country/Region','Date'], 
+                                      right_on = ['Province/State', 'Country/Region','Date'])
+full_join.head()
+```
+---
+# Adding Month and Year as a new Column
+```bash
+full_join['Month-Year'] = full_join['Date'].dt.strftime('%b-%Y')
+full_join.head()
+```
+--
+```bash
+full_join2 = full_join.copy()
+
+#creating a new date columns - 1
+full_join2['Date - 1'] = full_join2['Date'] + pd.Timedelta(days=1)
+full_join2.rename(columns={'Confirmed': 'Confirmed - 1', 'Deaths': 'Deaths - 1', 'Recovered': 'Recovered - 1',
+                          'Date': 'Date Minus 1'}, inplace=True)
+full_join2.head()
+```
+---
+```bash
+full_join3 = full_join.merge(full_join2[['Province/State', 'Country/Region','Confirmed - 1', 'Deaths - 1', 
+                            'Recovered - 1', 'Date - 1', 'Date Minus 1']], how = 'left',
+                             left_on = ['Province/State','Country/Region','Date'], 
+                             right_on = ['Province/State', 'Country/Region','Date - 1'])
+full_join3.head()
+```
+---
+```bash
+full_join3['Confirmed Daily'] = full_join3['Confirmed'] - full_join3['Confirmed - 1']
+full_join3['Deaths Daily'] = full_join3['Deaths'] - full_join3['Deaths - 1']
+full_join3['Recovered Daily'] = full_join3['Recovered'] - full_join3['Recovered - 1']
+print(full_join3.shape)
+```
+---
+# Braking the numbers by Day
+```bash
+#creating a new df    
+full_join2 = full_join.copy()
+
+#creating a new date columns - 1
+full_join2['Date - 1'] = full_join2['Date'] + pd.Timedelta(days=1)
+full_join2.rename(columns={'Confirmed': 'Confirmed - 1', 'Deaths': 'Deaths - 1', 'Recovered': 'Recovered - 1',
+                          'Date': 'Date Minus 1'}, inplace=True)
+
+#Joing on the 2 DFs
+full_join3 = full_join.merge(full_join2[['Province/State', 'Country/Region','Confirmed - 1', 'Deaths - 1', 
+                            'Recovered - 1', 'Date - 1', 'Date Minus 1']], how = 'left',
+                             left_on = ['Province/State','Country/Region','Date'], 
+                             right_on = ['Province/State', 'Country/Region','Date - 1'])
+
+#minus_onedf.rename(columns={'Confirmed': 'Confirmed - 1', 'Deaths': 'Deaths - 1', 'Recovered': 'Recovered - 1'}, inplace=True)
+
+full_join3.head()
+
+# Additional Calculations
+full_join3['Confirmed Daily'] = full_join3['Confirmed'] - full_join3['Confirmed - 1']
+full_join3['Deaths Daily'] = full_join3['Deaths'] - full_join3['Deaths - 1']
+full_join3['Recovered Daily'] = full_join3['Recovered'] - full_join3['Recovered - 1']
+
+print(full_join3.shape)
+```
+---
+
+
+
 
 
 
