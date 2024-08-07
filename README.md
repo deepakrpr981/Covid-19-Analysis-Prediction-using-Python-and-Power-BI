@@ -21,37 +21,36 @@ import pandas as pd
 url = 'https://www.worldometers.info/coronavirus/'
 response = requests.get(url)
 if response.status_code == 200:
-    -- Parse the HTML content of the webpage
+  
     soup = BeautifulSoup(response.content, 'html.parser')
 
-    -- Find the table containing the COVID-19 data
+
     table = soup.find(id='main_table_countries_today')
 
-    -- Initialize a list to store the data
     data = []
 
-    -- Extract table headers
+    
     headers = []
     for header in table.find_all('th'):
         headers.append(header.text.strip())
 
-    -- Extract table rows
+
     for row in table.find_all('tr'):
         columns = row.find_all('td')
         if columns:
             data.append([col.text.strip() for col in columns])
 
-    --n Create a DataFrame
+
     df = pd.DataFrame(data, columns=headers)
 
-    -- Save the DataFrame to a CSV file
+
     df.to_csv('covid19_data_worldometer.csv', index=False)
 
     print("Data scraped and saved to covid19_data_worldometer.csv")
 else:
     print("Failed to retrieve data")
 
--- Inspect the first few rows of the DataFrame
+
 print(df.head())
 ```
 
