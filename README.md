@@ -183,10 +183,65 @@ full_join3['Recovered Daily'] = full_join3['Recovered'] - full_join3['Recovered 
 print(full_join3.shape)
 ```
 ---
+# Additing manually the numbers for first day
+```bash
 
+full_join3['Confirmed Daily'].loc[full_join3['Date'] == '2020-01-22'] = full_join3['Confirmed']
+full_join3['Deaths Daily'].loc[full_join3['Date'] == '2020-01-22'] = full_join3['Deaths']
+full_join3['Recovered Daily'].loc[full_join3['Date'] == '2020-01-22'] = full_join3['Recovered']
 
+# deleting columns
+del full_join3['Confirmed - 1']
+del full_join3['Deaths - 1']
+del full_join3['Recovered - 1']
+del full_join3['Date - 1']
+del full_join3['Date Minus 1']
+ull_join3[full_join3["Deaths Daily"]<0]
+```
+---
 
+```bash
+full_join3['Deaths Daily']=np.where(full_join3['Deaths Daily']<0 ,0,full_join3['Deaths Daily'])
+full_join3['Confirmed Daily']=np.where(full_join3['Confirmed Daily']<0 ,0,full_join3['Confirmed Daily'])
+full_join3['Recovered Daily']=np.where(full_join3['Recovered Daily']<0 ,0,full_join3['Recovered Daily'])
+```
+---
+# Data Cleaning Cycle
+It is the method of analyzing, distinguishing, and correcting untidy, raw data. Data cleaning involves filling in missing values, handling outliers, and distinguishing and fixing errors present in the dataset. Whereas the techniques used for data cleaning might vary in step with different types of datasets. In this tutorial, we will learn how to clean data using pandas. The following are standard steps to map out data cleaning:
 
+```bash
+#get the all columns name 
+full_join3.keys()
+#check the data types  of each columns 
+full_join3.dtypes
+#count the all missing values of particular columns 
+full_join3.isnull().sum()
+#identify the missing values with heatmap
+sns.heatmap(full_join3.isnull())
+#get those columns name which have missing values 
+[col for col in full_join3.columns if full_join3[col].isnull().sum()>0 ]
 
+#fill the numerical  columns which had contain null values 
+full_join3['Lat'] = full_join3['Lat'].fillna(full_join3['Lat'].mean())
+full_join3['Long'] = full_join3['Long'].fillna(full_join3['Long'].mean())
+full_join3['Recovered'] = full_join3['Recovered'].fillna(full_join3['Recovered'].median())
+full_join3['Recovered Daily'] = full_join3['Recovered Daily'].fillna(full_join3['Recovered Daily'].median())
 
+fill the categorical columns which had contain null values 
+full_join3['Province/State'] = full_join3['Province/State'].fillna(full_join3['Province/State'].mode()[0])
 
+full_join3.isnull().sum()
+```
+
+# Data Export?
+Data export is the extraction and conversion of raw data from their existing format into a format required by another application. Exporting data is also a way of backing up data or moving it between two different versions of programs. This process usually contains information such as user ID, user app key, individual ID, IP address, and custom user variables (custom var name).
+
+Exporting data can prove as a part of a backup strategy. This helps in extracting data and storing it separately. Data export saves a huge chunk of costs incurred in organizing and tracking data. An export command can be usually found in the “file” menu. This command is used to extract specific data like photos and videos. Text files do not contain any specific data to be exported.
+```sql
+path = "C:\\Users\\DELL\\Desktop\\"
+
+# Changing my CWD
+os.chdir(path)
+
+full_join3.to_csv('CoronaVirus Data.csv')
+```
