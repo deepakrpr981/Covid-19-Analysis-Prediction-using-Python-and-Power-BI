@@ -23,34 +23,20 @@ response = requests.get(url)
 if response.status_code == 200:
   
     soup = BeautifulSoup(response.content, 'html.parser')
-
-
     table = soup.find(id='main_table_countries_today')
-
-    data = []
-
-    
+    data = []   
     headers = []
     for header in table.find_all('th'):
         headers.append(header.text.strip())
-
-
     for row in table.find_all('tr'):
         columns = row.find_all('td')
         if columns:
             data.append([col.text.strip() for col in columns])
-
-
     df = pd.DataFrame(data, columns=headers)
-
-
     df.to_csv('covid19_data_worldometer.csv', index=False)
-
     print("Data scraped and saved to covid19_data_worldometer.csv")
 else:
     print("Failed to retrieve data")
-
-
 print(df.head())
 ```
 
